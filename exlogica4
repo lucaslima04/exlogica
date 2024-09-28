@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+
+    char *estados[] = {"SP", "RJ", "MG", "ES", "Outros"};
+    double valores[] = {67836.43, 36678.66, 29229.88, 27165.48, 19849.53};
+    int num_estados = sizeof(estados) / sizeof(estados[0]);
+
+    double total = 0;
+    for (int i = 0; i < num_estados; i++) {
+        total += valores[i];
+    }
+
+    printf("Percentual de representação por estado:\n");
+    for (int i = 0; i < num_estados; i++) {
+        double percentual = (valores[i] / total) * 100;
+        printf("%s: %.2f%%\n", estados[i], percentual);
+    }
+
+    return 0;
+}

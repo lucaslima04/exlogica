@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    char str[] = "target"; 
+    char invertida[100];   
+    int i = 0;             
+    int j = 0;           
+
+    
+    while (str[i] != '\0') {
+        i++; 
+    }
+
+   
+    for (i--; i >= 0; i--) { 
+        invertida[j] = str[i]; 
+        j++; 
+    }
+    
+
+
+    printf("String original: %s\n", str);      
+    printf("String invertida: %s\n", invertida); 
+
+    return 0;
+}
